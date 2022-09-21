@@ -1,0 +1,19 @@
+{
+  "name": "rental-property-app",
+  "version": "1.0.0",
+  "description": "Final year of university project with both practical and theoretical thesis on mobile cloud application computing building a property mobile application using real time database and serverless backend services from AWS, Google Maps API and many more.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Manjellion/Rental-Property-App.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Manjellion/Rental-Property-App/issues"
+  },
+  "homepage": "https://github.com/Manjellion/Rental-Property-App#readme"
+}
