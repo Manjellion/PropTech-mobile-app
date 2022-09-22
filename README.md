@@ -49,6 +49,12 @@ These other tools consits of other cloud services that we will be using for test
 
 All these cloud computing services are on a pay as you go pricing but do have a free tier enabled for us to pratice demos or use it to gather data on the minimum requirement allowing the project to not be affected by costing, however we will be using secondary data and projections/ preidictions on the scale of the pricings.
 
+### Initialising Project
+
+To get started with developing our application we will need to install the React Native Expo CLI in order to have our application builder and be able to initialise the project. More about it in this <a href="https://docs.expo.dev/get-started/installation/">Link</a>
+
+Using the command <code>expo init</code> choose a template etc, template for typescript or just blank, and begin to install our dependencies and libraries. 
+
 ## Designs 
 
 ### Home Screen
