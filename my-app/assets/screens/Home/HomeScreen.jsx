@@ -3,7 +3,7 @@ import { Header, Hero, CardSection } from '../../components/Home/export'
 
 const HomeScreen = () => {
   return (
-    <ScrollView>
+    <ScrollView style={{ backgroundColor: '#fff' }}>
       <Header />
       <Hero />
       <CardSection />

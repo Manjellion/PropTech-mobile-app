@@ -11,9 +11,6 @@ const Header = () => {
 
   return (
     <View style={styles.HeaderContainer}>
-      <View style={styles.Logo}>
-        <Text style={styles.LogoText}>Logo</Text>
-      </View>
         <TouchableOpacity style={styles.SearchButton} onPress={SearchResponse}>
           <Text style={styles.SearchText}><AntDesign name='search1' size={17.5}/> Where are you going?</Text>
         </TouchableOpacity>

@@ -5,13 +5,7 @@ const styles = StyleSheet.create({
         flexDirection: 'row',
         justifyContent: 'center',
         alignItems: 'center',
-        paddingTop: 10
-    },
-    Logo: {
-        marginHorizontal: 20
-    },
-    LogoText: {
-        fontSize: 17.5
+        paddingTop: 10,
     },
     SearchButton: {
         width: '60%',
@@ -21,14 +15,14 @@ const styles = StyleSheet.create({
     },
     SearchText: {
         textAlign: 'center',
-        fontSize: 17.5
+        fontSize: 17.5,
     },
     HeroContainer: {
         flexDirection: 'row',
         justifyContent: 'space-evenly',
         alignItems: 'flex-end',
-        paddingTop: 75,
-        paddingBottom: 75
+        paddingTop: 25,
+        paddingBottom: 25
     },
     HeroTitleText: {
         fontSize: 60,
@@ -37,7 +31,8 @@ const styles = StyleSheet.create({
     HeroButton: {
         backgroundColor: '#000',
         padding: 15,
-        borderRadius: 5
+        borderRadius: 5,
+        marginVertical: 10
     },
     HeroButtonText: {
         color: '#fff'
