@@ -1,4 +1,4 @@
-# Property-Mobile-Application
+# Rental Sky
 
 ## Introduction
 Final year of university project with both practical and theoretical thesis on mobile cloud application computing building a property mobile application using real time database and serverless backend services from AWS, Google Maps API and many more. 
