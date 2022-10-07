@@ -12,8 +12,8 @@ const ProfileScreen = () => {
                 <Text style={styles.profileHomeUsernameText}>Hi, I'm Username</Text>
                 <Text style={styles.profileHomeJoin}>Joined in 2022</Text>
             </View>
-            <TouchableOpacity>
-                <Text style={styles.profileHomeEdit}>Edit</Text>
+            <TouchableOpacity style={styles.profileHomeEditBtn} onPress={() => console.log('Edit button pressed')}>
+                <Text style={styles.profileHomeEditText}>Edit</Text>
             </TouchableOpacity>
         </View>
     </View>

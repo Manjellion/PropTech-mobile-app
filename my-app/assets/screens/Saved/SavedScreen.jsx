@@ -31,7 +31,8 @@ const SavedScreen = ({ navigation }) => {
     } else {
       return <View>
         {dummyData.map((cardInfo, key) => (
-          <Cards key={key}
+          <Cards
+            key={key}
             img = {cardInfo.img}
             name = {cardInfo.name}
           />

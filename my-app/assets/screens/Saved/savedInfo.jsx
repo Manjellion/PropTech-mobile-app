@@ -4,7 +4,7 @@ import dummyImg from '../../images/dummyImage.jpg'
 import AntDesign from 'react-native-vector-icons/AntDesign'
 import styles from '../../components/Saved/style'
 
-const savedInfo = () => {
+const SavedInfo = () => {
   return (
     <ScrollView style={styles.cardInfoContainer}>
       <Text style={styles.cardInfoHeader}>Houses</Text>
@@ -26,4 +26,4 @@ const savedInfo = () => {
   )
 }
 
-export default savedInfo
+export default SavedInfo

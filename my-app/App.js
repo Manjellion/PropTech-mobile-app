@@ -4,16 +4,8 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 const Tab = createBottomTabNavigator();
 
-import { HomeScreenNavigator, SaveScreenNavigator, ProfileScreenNavigator } from './StackNavigator'
+import { HomeScreenNavigator, SaveScreenNavigator, InboxScreenNavigator ,ProfileScreenNavigator } from './StackNavigator'
 import AntDesign from 'react-native-vector-icons/AntDesign'
-
-const InboxTemp = () => {
-  return(
-    <View>
-      <Text>InboxTemp</Text>
-    </View>
-  )
-}
 
 export default function App() {
   return (
@@ -22,7 +14,9 @@ export default function App() {
           <Tab.Navigator 
             initialRouteName='Home'
             screenOptions={{
-              tabBarActiveTintColor: '#e91e63'
+              tabBarActiveTintColor: '#e91e63',
+              tabBarShowLabel: false,
+              headerShown: false
             }}
           >
               <Tab.Screen 
@@ -47,7 +41,7 @@ export default function App() {
               />
               <Tab.Screen 
                 name='Inbox' 
-                component={InboxTemp} 
+                component={InboxScreenNavigator} 
                 options={{
                   tabBarLabel: 'Inbox',
                   tabBarIcon: ({ color, size }) => (

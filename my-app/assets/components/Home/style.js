@@ -38,7 +38,7 @@ const styles = StyleSheet.create({
         color: '#fff'
     },
     CardContainer: {
-        paddingTop: 50
+        paddingVertical: 5
     },
     CardBoxContainer: {
         paddingLeft: 20,
