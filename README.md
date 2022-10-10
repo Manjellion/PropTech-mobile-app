@@ -55,16 +55,3 @@ To get started with developing our application we will need to install the React
 
 Using the command <code>expo init</code> choose a template etc, template for typescript or just blank, and begin to install our dependencies and libraries. 
 
-## Designs 
-
-### Home Screen
-![image](https://user-images.githubusercontent.com/77361838/191483576-4acaa0c7-3990-4c72-8096-48f932b32670.png)
-
-### Saved/ Wishlist Screen
-![image](https://user-images.githubusercontent.com/77361838/191483844-3f433303-d6af-43cb-9934-2e401f7f411a.png)
-
-### Message Screen
-![image](https://user-images.githubusercontent.com/77361838/191484375-b203dad8-ac20-4823-ae08-4017feb44d85.png)
-
-### Profile Screen
-![image](https://user-images.githubusercontent.com/77361838/191484473-dbc58ca2-dad5-4b7f-82f1-ed55ab5ad4ee.png)
