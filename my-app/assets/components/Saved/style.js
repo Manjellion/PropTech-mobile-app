@@ -69,6 +69,20 @@ const styles = StyleSheet.create({
     cardInfoText: {
         color: 'grey',
         paddingVertical: 1
+    },
+    infoCardsContainer: {
+        flex: 1,
+        backgroundColor: '#fff',
+        paddingHorizontal: 35
+    },
+    infoCardImg: {
+        height: 300,
+        width: '100%'
+    },
+    infoCardHeader: {
+        flexDirection: 'row',
+        justifyContent: 'space-between',
+        marginVertical: 10
     }
 })
 
