@@ -21,6 +21,7 @@ const HomeScreen = ({ navigation }) => {
         {dummyData.map((cardInfo, key) => (
           <TouchableOpacity onPress={() => navigation.navigate('InfoScreen')} style={{ padding: 20 }}>
             <Cards
+              key={key}
               image={dummyImg}
               name={cardInfo.name}
               level={cardInfo.level}

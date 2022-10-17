@@ -21,8 +21,9 @@ const InboxScreen = () => {
       <Header />
       <View>
         {dummyData.map((info, key) => (
-          <TouchableOpacity key={key}>
+          <TouchableOpacity>
             <MsgCard 
+              key={key}
               img={info.img}
               username={info.name}
               userMsg={info.msg}
