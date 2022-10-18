@@ -18,10 +18,7 @@ const Cards = (props) => {
                 <View>
                     <Text>{props.name}</Text>
                     <Text>{props.level}</Text>
-                    <Text>{props.date}</Text>
-                    <Text>£{props.price}</Text>
                 </View>
-                <Text><AntDesign name='star' color={'darkyellow'} size={17.5}/> {props.rating}</Text>
             </View>
         </View>
     </View>

@@ -4,7 +4,7 @@ import Header from '../../components/Inbox/Header'
 import MsgCard from '../../components/Inbox/MsgCard'
 import styles from '../../components/Inbox/styles'
 
-const InboxScreen = () => {
+const InboxScreen = ({ navigation }) => {
 
   const dummyData = [
     {name: 'Carlos', msg: 'Thanks for reply back I will get to you later', img: 'https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80'},
@@ -21,7 +21,7 @@ const InboxScreen = () => {
       <Header />
       <View>
         {dummyData.map((info, key) => (
-          <TouchableOpacity key={key}>
+          <TouchableOpacity key={key} onPress={() => navigation.navigate('MessageScreen')}>
             <MsgCard 
               img={info.img}
               username={info.name}

@@ -6,12 +6,12 @@ import dummyImg from '../../images/dummyImage.jpg'
 const HomeScreen = ({ navigation }) => {
 
   const dummyData = [
-    {img: {dummyImg}, name: 'House1', level: 'Professional Host', date: '20-25 Nov', price: '1600', rating: '4.98'},
-    {img: {dummyImg}, name: 'House1', level: 'Professional Host', date: '20-25 Nov', price: '1600', rating: '4.98'},
-    {img: {dummyImg}, name: 'House1', level: 'Professional Host', date: '20-25 Nov', price: '1600', rating: '4.98'},
-    {img: {dummyImg}, name: 'House1', level: 'Professional Host', date: '20-25 Nov', price: '1600', rating: '4.98'},
-    {img: {dummyImg}, name: 'House1', level: 'Professional Host', date: '20-25 Nov', price: '1600', rating: '4.98'},
-    {img: {dummyImg}, name: 'House1', level: 'Professional Host', date: '20-25 Nov', price: '1600', rating: '4.98'},
+    {img: {dummyImg}, name: 'House1', level: 'Professional Host'},
+    {img: {dummyImg}, name: 'House1', level: 'Professional Host'},
+    {img: {dummyImg}, name: 'House1', level: 'Professional Host'},
+    {img: {dummyImg}, name: 'House1', level: 'Professional Host'},
+    {img: {dummyImg}, name: 'House1', level: 'Professional Host'},
+    {img: {dummyImg}, name: 'House1', level: 'Professional Host'},
   ]
 
   return (
@@ -24,9 +24,6 @@ const HomeScreen = ({ navigation }) => {
               image={dummyImg}
               name={cardInfo.name}
               level={cardInfo.level}
-              date={cardInfo.date}
-              price={cardInfo.price}
-              rating={cardInfo.rating}
             />
           </TouchableOpacity> 
         ))}

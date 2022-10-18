@@ -46,29 +46,79 @@ const styles = StyleSheet.create({
         fontWeight: '500',
         paddingVertical: 5
     },
-    cardInfoButtonContainer: {
-        flexDirection: 'row',
+    cardInfoTitle: {
+        fontSize: 15,
         paddingVertical: 5
     },
     cardInfoImage: {
-        height: 300,
+        height: 350,
         width: 350,
-        borderRadius: 10,
+        borderRadius: 15,
         alignSelf: 'center',
     },
     cardInfomation: {
-        flexDirection:'row',
-        justifyContent: 'space-between',
+        paddingVertical: 10,
+    },
+    cardInfoPrice: {
         paddingVertical: 10
     },
-    cardInfoTextTitle: {
-        fontSize: 20,
-        fontWeight: '500',
-        paddingVertical: 1
+    cardInfoPropertyInfo: {
+        paddingVertical: 10,
     },
-    cardInfoText: {
-        color: 'grey',
-        paddingVertical: 1
+    cardInfoDesciprtion: {
+        paddingVertical: 10
+    },
+    cardInfoContact: {
+        alignItems: 'center',
+        paddingVertical: 30
+    },
+    cardInfoContactMsgBtn: {
+        padding: 10,
+        backgroundColor: '#e91e63',
+        borderRadius: 5,
+        marginBottom: 10
+    },
+    cardInfoContactMsgBtnText: {
+        color: '#fff'
+    },
+    cardInfoContactForm: {
+        borderWidth: .5,
+        width: '100%',
+        padding: 5
+    },
+    cardInfoContactFormTitle: {
+        textAlign: 'center',
+        paddingVertical: 10
+    },
+    textInput: {
+        borderWidth: 1,
+        padding: 5,
+        width: '80%',
+        marginVertical: 5,
+        alignSelf: 'center'
+    },
+    textInputDesc: {
+        borderWidth: 1,
+        paddingHorizontal: 5,
+        paddingVertical: 40,
+        width: '80%',
+        marginVertical: 5,
+        alignSelf: 'center'
+    },
+    cardInfoContactFormBtnSection: {
+        flexDirection: 'row',
+        justifyContent: 'space-evenly',
+        paddingVertical: 20,
+        alignItems: 'center'
+    },
+    cardInfoContactFormBtn: {
+        padding: 10,
+        backgroundColor: '#e91e63',
+        borderRadius: 5,
+        marginBottom: 10,
+    },
+    cardInfoContactFormBtnText: {
+        color: '#fff'
     }
 })
 

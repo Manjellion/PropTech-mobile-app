@@ -24,7 +24,7 @@ const styles = StyleSheet.create({
     msgCardImg: {
         width: 100,
         height: 100,
-        borderRadius: '50%',
+        borderRadius: 50,
         borderWidth: .5
     },
     msgCardText: {
@@ -44,7 +44,27 @@ const styles = StyleSheet.create({
         flex: 1,
         backgroundColor: '#fff',
         paddingHorizontal: 35
+    },
+    messageScreenContainer: {
+        flex: 1,
+        backgroundColor: '#fff',
+        paddingHorizontal: 35,
+        paddingVertical: 10
+    },
+    messageScreenHeader: {
+        flexDirection: 'row',
+        justifyContent: 'space-between',
+        alignItems: 'center'
+    },
+    messageScreenHeaderUsername: {
+        fontSize: 20
+    },
+    messageScreenHeaderImg: {
+        height: 100,
+        width: 100,
+        borderRadius: 50
     }
+
 })
 
 export default styles;
