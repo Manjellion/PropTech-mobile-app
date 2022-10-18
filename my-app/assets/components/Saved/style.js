@@ -65,6 +65,7 @@ const styles = StyleSheet.create({
     cardInfoPropertyInfo: {
         paddingVertical: 10,
     },
+<<<<<<< HEAD
     cardInfoDesciprtion: {
         paddingVertical: 10
     },
@@ -119,6 +120,25 @@ const styles = StyleSheet.create({
     },
     cardInfoContactFormBtnText: {
         color: '#fff'
+=======
+    cardInfoText: {
+        color: 'grey',
+        paddingVertical: 1
+    },
+    infoCardsContainer: {
+        flex: 1,
+        backgroundColor: '#fff',
+        paddingHorizontal: 35
+    },
+    infoCardImg: {
+        height: 300,
+        width: '100%'
+    },
+    infoCardHeader: {
+        flexDirection: 'row',
+        justifyContent: 'space-between',
+        marginVertical: 10
+>>>>>>> d2e381b44e3c8d533bfa708f3a029c7c441dfe8f
     }
 })
 
