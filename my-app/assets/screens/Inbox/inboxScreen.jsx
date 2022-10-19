@@ -21,11 +21,7 @@ const InboxScreen = ({ navigation }) => {
       <Header />
       <View>
         {dummyData.map((info, key) => (
-<<<<<<< HEAD
           <TouchableOpacity key={key} onPress={() => navigation.navigate('MessageScreen')}>
-=======
-          <TouchableOpacity>
->>>>>>> d2e381b44e3c8d533bfa708f3a029c7c441dfe8f
             <MsgCard 
               key={key}
               img={info.img}
