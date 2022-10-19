@@ -1,15 +1,10 @@
-<<<<<<< HEAD
 import { View, Text, Image, ScrollView, TouchableOpacity, TextInput } from 'react-native'
 import React, { useState } from 'react'
-=======
-import { View, Text, Image, ScrollView, Button, TouchableOpacity } from 'react-native'
-import React from 'react'
->>>>>>> d2e381b44e3c8d533bfa708f3a029c7c441dfe8f
+
 import dummyImg from '../../images/dummyImage.jpg'
 import FontAwesome5 from 'react-native-vector-icons/FontAwesome5'
 import styles from '../../components/Saved/style'
 
-<<<<<<< HEAD
 const SavedInfo = () => {
   
   // initialise a state variable for the textinput in form section and update the variable upon change and being sent to agent
@@ -59,28 +54,6 @@ const SavedInfo = () => {
           </View>
         </View>
       </View>
-=======
-const SavedInfo = ({ navigation }) => {
-  return (
-    <ScrollView style={styles.cardInfoContainer}>
-      <TouchableOpacity onPress={() => navigation.navigate('Info')}>
-        <Text style={styles.cardInfoHeader}>Houses</Text>
-        <View style={styles.cardInfoButtonContainer}>
-          <Button title="Dates" style={styles.cardInfoButton}/>
-          <Button title="Guest" style={styles.cardInfoButton}/>
-        </View>
-        <Image source={dummyImg} style={styles.cardInfoImage} />
-        <View style={styles.cardInfomation}>
-          <View style={styles.cardInfoTextContainer}>
-            <Text style={styles.cardInfoTextTitle}>Entire House in Location</Text>
-            <Text style={styles.cardInfoText}>Lorem Speech since 1918 custom</Text>
-            <Text style={styles.cardInfoText}>4 beds</Text>
-            <Text style={styles.cardInfoTextTitle}>£198 night</Text>
-          </View>
-          <Text style={styles.cardInfoRating}><AntDesign name='star' color={'darkyellow'} size={17.5}/>4.98 (73)</Text>
-        </View>
-      </TouchableOpacity>
->>>>>>> d2e381b44e3c8d533bfa708f3a029c7c441dfe8f
     </ScrollView>
   )
 }
