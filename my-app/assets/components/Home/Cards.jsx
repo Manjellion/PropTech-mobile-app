@@ -6,7 +6,7 @@ import React from 'react'
 const Cards = (props) => {
 
   return (
-    <View style={styles.CardContainer}>
+    <View style={styles.CardContainer} key={props.key}>
         <View style={styles.CardBoxContainer}>
             <Image source={props.image} style={styles.CardImage}/>
             <TouchableOpacity>

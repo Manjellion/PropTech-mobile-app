@@ -45,9 +45,8 @@ const SavedScreen = ({ navigation }) => {
     <ScrollView style={{ backgroundColor: '#fff', flex: 1 }}>
       <Header />
         {dummyData.map((cardInfo, key) => (
-          <TouchableOpacity onPress={() => navigation.navigate('InfoScreen')}>
+          <TouchableOpacity onPress={() => navigation.navigate('InfoScreen')} key={key}>
             <Cards 
-              key={key}
               img={dummyImg}
               name={cardInfo.name}
             />

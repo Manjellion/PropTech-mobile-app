@@ -26,7 +26,7 @@ const SavedInfo = () => {
       <Text style={styles.cardInfoTitle}>House by Owner</Text>
       <Image source={dummyImg} style={styles.cardInfoImage} />
       <View style={styles.cardInfomation}>
-          <Text style={styles.cardInfoPrice}>For Sale: $400,000</Text>
+          <Text style={styles.cardInfoPrice}>For Sale: £400,000</Text>
           <Text style={styles.cardInfoPropertyInfo}><FontAwesome5 name='home' size={30} />  Property Type: {dummyData.propertyType}</Text>
           <Text style={styles.cardInfoPropertyInfo}><FontAwesome5 name='car' size={30} />  Garage: {dummyData.GarageNum}</Text>
           <Text style={styles.cardInfoPropertyInfo}><FontAwesome5 name='bed' size={30} />  Bedrooms: {dummyData.numOfBedrooms}</Text>

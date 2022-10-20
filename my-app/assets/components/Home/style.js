@@ -11,12 +11,31 @@ const styles = StyleSheet.create({
         width: '60%',
         borderRadius: 20,
         padding: 15,
-        backgroundColor: 'lightgrey'
+        backgroundColor: 'lightgrey',
+        flexDirection: 'row',
+        alignItems: 'center'
+    },
+    searchContainer: {
+        flex: 1,
+        backgroundColor: '#fff',
+        justifyContent: 'center',
+        alignItems: 'center',
     },
     SearchText: {
         textAlign: 'center',
         fontSize: 17.5,
+        marginLeft: 5,
     },
+    textInputStyle: {
+        width: '75%',
+        borderRadius: 10,
+        padding: 15,
+        backgroundColor: 'lightgrey',
+    },
+    flatListStyle: {
+        paddingHorizontal: 30,
+        paddingTop: 10
+    },  
     HeroContainer: {
         flexDirection: 'row',
         justifyContent: 'space-evenly',

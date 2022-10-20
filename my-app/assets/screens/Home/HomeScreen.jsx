@@ -1,7 +1,9 @@
-import { ScrollView, TouchableOpacity } from 'react-native'
-import { Header, Hero } from '../../components/Home/export'
+import { ScrollView, TouchableOpacity, View, Text } from 'react-native'
+import { Hero } from '../../components/Home/export'
 import Cards from '../../components/Home/Cards'
 import dummyImg from '../../images/dummyImage.jpg'
+import styles from '../../components/Home/style'
+import AntDesign from 'react-native-vector-icons/AntDesign'
 
 const HomeScreen = ({ navigation }) => {
 
@@ -16,12 +18,16 @@ const HomeScreen = ({ navigation }) => {
 
   return (
     <ScrollView style={{ backgroundColor: '#fff' }}>
-      <Header />
+    <View style={styles.HeaderContainer}>
+      <TouchableOpacity style={styles.SearchButton} onPress={() => navigation.navigate('Search')}>
+        <AntDesign name='search1' size={17.5} />
+        <Text style={styles.SearchText}>Search</Text>
+    </TouchableOpacity>
+    </View>
       <Hero />
         {dummyData.map((cardInfo, key) => (
-          <TouchableOpacity onPress={() => navigation.navigate('InfoScreen')} style={{ padding: 20 }}>
+          <TouchableOpacity onPress={() => navigation.navigate('InfoScreen')} style={{ padding: 20 }} key={key}>
             <Cards
-              key={key}
               image={dummyImg}
               name={cardInfo.name}
               level={cardInfo.level}
