@@ -55,3 +55,20 @@ To get started with developing our application we will need to install the React
 
 Using the command <code>expo init</code> choose a template etc, template for typescript or just blank, and begin to install our dependencies and libraries. 
 
+## Design (AdobeXD)
+
+### Home Design 
+![image](https://user-images.githubusercontent.com/77361838/197478872-4b754a7f-9587-47a0-976f-ebaaddb405c1.png)
+
+### Save Screen Design
+![image](https://user-images.githubusercontent.com/77361838/197478995-e4226bfd-1b95-4636-b79e-028b0d6129e0.png)
+
+### Property Information Screen 
+![image](https://user-images.githubusercontent.com/77361838/197479161-b3d95c93-fc0e-4d99-8462-45f2f6b5ec08.png)
+
+### Messaging Screen
+![image](https://user-images.githubusercontent.com/77361838/197479256-c578ee16-06ac-434f-b73a-b86736533dcb.png)
+
+### Profile Screen
+![image](https://user-images.githubusercontent.com/77361838/197479332-5df492d4-9059-4e1f-a4b5-9ee529453cee.png)
+
