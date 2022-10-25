@@ -1,0 +1,17 @@
+{
+  "trigger": true,
+  "modules": [
+    "custom"
+  ],
+  "parentResource": "proptechappbe871a5cbe871a5c",
+  "functionName": "proptechappbe871a5cbe871a5cPostConfirmation",
+  "resourceName": "proptechappbe871a5cbe871a5cPostConfirmation",
+  "parentStack": "auth",
+  "triggerEnvs": "[]",
+  "triggerDir": "C:\\snapshot\\repo\\build\\node_modules\\@aws-amplify\\amplify-category-auth\\provider-utils\\awscloudformation\\triggers\\PostConfirmation",
+  "triggerTemplate": "PostConfirmation.json.ejs",
+  "triggerEventPath": "PostConfirmation.event.json",
+  "roleName": "proptechappbe871a5cbe871a5cPostConfirmation",
+  "skipEdit": true,
+  "enableCors": false
+}

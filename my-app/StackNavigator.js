@@ -8,7 +8,6 @@ import Search from './assets/screens/Home/Search';
 
 import SavedScreen from './assets/screens/Saved/SavedScreen';
 import SavedInfo from './assets/screens/Saved/SavedInfo';
-import Info from './assets/screens/Saved/InfoScreen';
 
 import InboxScreen from './assets/screens/Inbox/InboxScreen';
 import MessageScreen from './assets/screens/Inbox/MessageScreen';
@@ -46,10 +45,6 @@ const SaveScreenNavigator = () => {
             <Stack.Screen 
                 name="InfoScreen"
                 component={SavedInfo}
-            />
-            <Stack.Screen 
-                name="Info"
-                component={Info}
             />
         </Stack.Navigator>
     )

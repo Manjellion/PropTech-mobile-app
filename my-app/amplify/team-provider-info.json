@@ -1,0 +1,31 @@
+{
+  "dev": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-proptechapp-dev-94127-authRole",
+      "UnauthRoleArn": "arn:aws:iam::190287847504:role/amplify-proptechapp-dev-94127-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::190287847504:role/amplify-proptechapp-dev-94127-authRole",
+      "Region": "eu-west-2",
+      "DeploymentBucketName": "amplify-proptechapp-dev-94127-deployment",
+      "UnauthRoleName": "amplify-proptechapp-dev-94127-unauthRole",
+      "StackName": "amplify-proptechapp-dev-94127",
+      "StackId": "arn:aws:cloudformation:eu-west-2:190287847504:stack/amplify-proptechapp-dev-94127/a786b3f0-5377-11ed-a616-0a1f03d7e8a8",
+      "AmplifyAppId": "d2x32jvecioge5",
+      "AuthTriggerTemplateURL": "https://s3.amazonaws.com/amplify-proptechapp-dev-94127-deployment/amplify-cfn-templates/auth/auth-trigger-cloudformation-template.json"
+    },
+    "categories": {
+      "auth": {
+        "proptechappbe871a5cbe871a5c": {},
+        "userPoolGroups": {}
+      },
+      "function": {
+        "proptechappbe871a5cbe871a5cPostConfirmation": {
+          "deploymentBucketName": "amplify-proptechapp-dev-94127-deployment",
+          "s3Key": "amplify-builds/proptechappbe871a5cbe871a5cPostConfirmation-78626f7a413137474933-build.zip"
+        }
+      },
+      "api": {
+        "proptechappapi": {}
+      }
+    }
+  }
+}

@@ -5,7 +5,13 @@ const Tab = createBottomTabNavigator();
 import { HomeScreenNavigator, SaveScreenNavigator, InboxScreenNavigator ,ProfileScreenNavigator } from './StackNavigator'
 import AntDesign from 'react-native-vector-icons/AntDesign'
 
-export default function App() {
+import { Amplify }  from 'aws-amplify'
+import awsconfig from './src/aws-exports'
+Amplify.configure(awsconfig)
+
+import { withAuthenticator } from 'aws-amplify-react-native'
+
+function App() {
   return (
     <>
       <NavigationContainer>
@@ -62,3 +68,5 @@ export default function App() {
     </>
   );
 }
+
+export default withAuthenticator(App);
