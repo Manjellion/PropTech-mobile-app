@@ -4,7 +4,18 @@ import Header from '../../components/Profile/Header'
 
 import styles from '../../components/Profile/styles'
 
+import { Auth } from 'aws-amplify'
+
 const Settings = ({ navigation }) => {
+
+  async function signOut() {
+    try {
+      await Auth.signOut();
+    } catch(err) {
+      console.log("Error: ", err);
+    }
+  }
+
   return (
     <ScrollView style={styles.mainProfileContainer}>
         <TouchableOpacity onPress={() => navigation.navigate('ProfileScreen')}>
@@ -30,7 +41,7 @@ const Settings = ({ navigation }) => {
             <Text style={styles.supportSectionText}>Get help</Text>
             <Text style={styles.supportSectionText}>Give us feedback</Text>
         </View>
-        <TouchableOpacity style={styles.settingsSignOutBtn} onPress={() => console.log("Log out button pressed")}>
+        <TouchableOpacity style={styles.settingsSignOutBtn} onPress={() => signOut()}>
           <Text style={styles.settingsSignOutBtnText}>Sign Out</Text>
         </TouchableOpacity>
     </ScrollView>
