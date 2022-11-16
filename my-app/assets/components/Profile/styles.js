@@ -66,19 +66,6 @@ const styles = StyleSheet.create({
         marginVertical: 5,
         fontWeight: '300',
     },
-    hostingSection: {
-        paddingVertical: 25
-    },
-    hostingSectionHeader: {
-        fontSize: 20,
-        fontWeight: '500',
-        marginVertical: 10    
-    },
-    hostingSectionText: {
-        fontSize: 15,
-        marginVertical: 5,
-        fontWeight: '300',
-    },
     supportSection: {
         paddingTop: 25,
         paddingBottom: 50
