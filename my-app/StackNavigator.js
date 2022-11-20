@@ -14,6 +14,7 @@ import MessageScreen from './assets/screens/Inbox/MessageScreen';
 
 import SettingsScreen from './assets/screens/Profile/SettingSceen';
 import ProfilesScreen from './assets/screens/Profile/ProfileScreen'
+import { NotificationScreen, PersonalInfoScreen, PrivacyInfoScreen } from './assets/screens/Setting/export'
 
 const HomeScreenNavigator = () => {
     return(
@@ -77,6 +78,18 @@ const ProfileScreenNavigator = () => {
             <Stack.Screen 
                 name="ProfileScreen"
                 component={ProfilesScreen}
+            />
+            <Stack.Screen 
+                name="Personal information"
+                component={PersonalInfoScreen}
+            />
+            <Stack.Screen 
+                name="Notifications"
+                component={NotificationScreen}
+            />
+            <Stack.Screen 
+                name="Privacy and Settings"
+                component={PrivacyInfoScreen}
             />
         </Stack.Navigator>
     )

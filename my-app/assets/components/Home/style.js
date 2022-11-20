@@ -70,9 +70,10 @@ const styles = StyleSheet.create({
     },
     CardSaveBtn: {
         position: 'absolute',
-        padding: 20,
-        right: 0,
+        padding: 10,
+        right: 10,
         bottom: 160,
+        backgroundColor: 'white',
     },
     CardInfo: {
         flexDirection: 'row',

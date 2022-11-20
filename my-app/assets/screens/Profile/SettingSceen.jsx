@@ -23,9 +23,15 @@ const Settings = ({ navigation }) => {
         </TouchableOpacity>
         <View style={styles.accountSettings}>
             <Text style={styles.accountSettingsHeader}>Account settings</Text>
-            <Text style={styles.accountSettingsText}>Personal information</Text>
-            <Text style={styles.accountSettingsText}>Notifications</Text>
-            <Text style={styles.accountSettingsText}>Privacy and sharing</Text>
+            <TouchableOpacity onPress={() => navigation.navigate('Personal information')}>
+              <Text style={styles.accountSettingsText}>Personal information</Text>
+            </TouchableOpacity>
+            <TouchableOpacity onPress={() => navigation.navigate('Notifications')}>
+              <Text style={styles.accountSettingsText}>Notifications</Text>
+            </TouchableOpacity>
+            <TouchableOpacity onPress={() => navigation.navigate('Privacy and Settings')}>
+              <Text style={styles.accountSettingsText}>Privacy and sharing</Text>
+            </TouchableOpacity>
         </View>
         <View style={styles.supportSection}>
             <Text style={styles.supportSectionHeader}>Support</Text>
