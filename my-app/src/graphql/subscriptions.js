@@ -43,3 +43,66 @@ export const onDeleteUser = /* GraphQL */ `
     }
   }
 `;
+export const onCreatePost = /* GraphQL */ `
+  subscription OnCreatePost(
+    $filter: ModelSubscriptionPostFilterInput
+    $owner: String
+  ) {
+    onCreatePost(filter: $filter, owner: $owner) {
+      id
+      image
+      title
+      subtitle
+      description
+      price
+      type
+      bedroom
+      garage
+      createdAt
+      updatedAt
+      owner
+    }
+  }
+`;
+export const onUpdatePost = /* GraphQL */ `
+  subscription OnUpdatePost(
+    $filter: ModelSubscriptionPostFilterInput
+    $owner: String
+  ) {
+    onUpdatePost(filter: $filter, owner: $owner) {
+      id
+      image
+      title
+      subtitle
+      description
+      price
+      type
+      bedroom
+      garage
+      createdAt
+      updatedAt
+      owner
+    }
+  }
+`;
+export const onDeletePost = /* GraphQL */ `
+  subscription OnDeletePost(
+    $filter: ModelSubscriptionPostFilterInput
+    $owner: String
+  ) {
+    onDeletePost(filter: $filter, owner: $owner) {
+      id
+      image
+      title
+      subtitle
+      description
+      price
+      type
+      bedroom
+      garage
+      createdAt
+      updatedAt
+      owner
+    }
+  }
+`;

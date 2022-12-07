@@ -60,13 +60,14 @@ const styles = StyleSheet.create({
         paddingVertical: 5
     },
     CardBoxContainer: {
-        paddingLeft: 20,
-        paddingRight: 20
+        paddingHorizontal: 20,
+        paddingVertical: 10
     },
     CardImage: {
-        height: 225,
-        width: '100%',
-        borderRadius: 10
+        height: 200,
+        width: 300,
+        borderRadius: 10,
+        alignSelf: 'center'
     },
     CardSaveBtn: {
         position: 'absolute',
@@ -76,9 +77,37 @@ const styles = StyleSheet.create({
         backgroundColor: 'white',
     },
     CardInfo: {
-        flexDirection: 'row',
-        justifyContent: 'space-between',
-        padding: 5
+        paddingLeft: 40
+    },
+    PostContainer: {
+        flex: 1,
+        justifyContent: 'flex-start',
+        alignContent: 'center',
+        backgroundColor: '#fff',
+    },
+    PostTitle: {
+        textAlign: 'center',
+        fontSize: 20,
+        fontWeight: '500'
+    },
+    InputContainer: {
+        alignSelf: 'center',
+    },
+    InputText: {
+        marginVertical: 10,
+        borderWidth: 1,
+        padding: 2.5
+    },
+    PostButton: {
+        padding: 20,
+        backgroundColor: '#000',
+        width: '30%',
+        alignSelf: 'center',
+        borderRadius: 10
+    },
+    PostButtonText: {
+        color: '#fff',
+        textAlign: 'center'
     }
 })
 

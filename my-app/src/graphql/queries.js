@@ -30,3 +30,46 @@ export const listUsers = /* GraphQL */ `
     }
   }
 `;
+export const getPost = /* GraphQL */ `
+  query GetPost($id: ID!) {
+    getPost(id: $id) {
+      id
+      image
+      title
+      subtitle
+      description
+      price
+      type
+      bedroom
+      garage
+      createdAt
+      updatedAt
+      owner
+    }
+  }
+`;
+export const listPosts = /* GraphQL */ `
+  query ListPosts(
+    $filter: ModelPostFilterInput
+    $limit: Int
+    $nextToken: String
+  ) {
+    listPosts(filter: $filter, limit: $limit, nextToken: $nextToken) {
+      items {
+        id
+        image
+        title
+        subtitle
+        description
+        price
+        type
+        bedroom
+        garage
+        createdAt
+        updatedAt
+        owner
+      }
+      nextToken
+    }
+  }
+`;

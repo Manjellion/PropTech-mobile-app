@@ -3,7 +3,26 @@ type User @model
     { allow: groups, groups: ["Admin"] },
     { allow: owner, ownerField: "username", operations: [read] }
   ]) {
-    id: ID!
-    username: String!
-    email: String!
-  }
+  id: ID!
+  username: String!
+  email: String! 
+}
+
+type Post @model 
+  @auth(rules: [
+    { allow: groups, groups: ["Admin"]},
+    { allow: owner}
+  ]) {
+  id: ID!
+
+  image: String!
+  title: String!
+  subtitle: String!
+  description: String!
+
+  price: Int!
+  type: String!
+  bedroom: Int!
+  garage: Int!
+  
+}

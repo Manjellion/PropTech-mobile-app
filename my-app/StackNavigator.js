@@ -5,6 +5,7 @@ const Stack = createStackNavigator();
 
 import HomeScreen from './assets/screens/Home/HomeScreen';
 import Search from './assets/screens/Home/Search';
+import PostEstate from './assets/screens/Home/PostEstate';
 
 import SavedScreen from './assets/screens/Saved/SavedScreen';
 import SavedInfo from './assets/screens/Saved/SavedInfo';
@@ -22,6 +23,10 @@ const HomeScreenNavigator = () => {
             <Stack.Screen 
                 name="HomeScreen"
                 component={HomeScreen}
+            />
+            <Stack.Screen 
+                name='Post'
+                component={PostEstate}
             />
             <Stack.Screen 
                 name='Search'

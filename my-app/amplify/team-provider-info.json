@@ -20,7 +20,7 @@
       "function": {
         "proptechappbe871a5cbe871a5cPostConfirmation": {
           "deploymentBucketName": "amplify-proptechapp-dev-94127-deployment",
-          "s3Key": "amplify-builds/proptechappbe871a5cbe871a5cPostConfirmation-7075676d6b6643333975-build.zip"
+          "s3Key": "amplify-builds/proptechappbe871a5cbe871a5cPostConfirmation-57644265786659655a6f-build.zip"
         }
       },
       "api": {

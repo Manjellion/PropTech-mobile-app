@@ -10,12 +10,12 @@ exports.handler = async (event, context) => {
     // an object that hold the users meta data such usernmae id and email
     let params = {
       Item: {
-        'id': {S: event.request.usereAttributes.sub},
-        '__typename': {S: 'User'},
-        'username': {S: event.userName},
-        'email': {S: event.request.userAttributes.email},
-        'createdAt': {S: date.toISOString()},
-        'updatedAt': {S: date.toISOString()},
+          'id': {S: event.request.userAttributes.sub},
+          '__typename': {S: 'User'},
+          'username': {S: event.userName},
+          'email': {S: event.request.userAttributes.email},
+          'createdAt': {S: date.toISOString()},
+          'updatedAt': {S: date.toISOString()},
       },
       // The table name will be coming from a enviroment variable set inside our lambda function
       TableName: process.env.USERTABLE
@@ -24,14 +24,16 @@ exports.handler = async (event, context) => {
     try {
       await ddb.putItem(params).promise()
       console.log("Success")
-    } catch(err) {
-      console.log("Error:", err);
+    } catch (err) {
+      console.log("Error", err)
     }
 
     // When operation is done we will end the operation to continue to cognito
+    console.log("Success: Everything executed correctly")
     context.done(null, event)
-  } else {
-    console.log("Error: Nothing was written to DynamoDB")
-    context.done(null, event)
-  }
+
+    } else {
+        console.log("Error: Nothing was written to DynamoDB")
+        context.done(null, event)
+    }
 }
