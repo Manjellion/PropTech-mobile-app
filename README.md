@@ -1,5 +1,10 @@
 # Rental Sky
 
+To get started download the code and open it on your favourite IDE
+Open up terminal which has the directory of the code in <strong>my-app</strong>
+Before your begin the application you need to install all the dependencies, input in terminal <code>npm i</code>
+use code <code>expo start</code> or <code>npm start</start> to start the application
+
 ## Introduction
 Final year of university project with both practical and theoretical thesis on mobile cloud application computing building a property mobile application using real time database and serverless backend services from AWS, Google Maps API and many more. 
 
