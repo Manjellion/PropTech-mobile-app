@@ -1,5 +1,7 @@
 # Rental Sky
 
+## Get Started 
+
 To get started download the code and open it on your favourite IDE
 <br>
 Open up terminal which has the directory of the code in <strong>my-app</strong>
