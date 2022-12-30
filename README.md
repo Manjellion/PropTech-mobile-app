@@ -9,6 +9,8 @@ Open up terminal which has the directory of the code in <strong>my-app</strong>
 Before your begin the application you need to install all the dependencies, input in terminal <code>npm i</code><br>
 Use code <code>expo start</code> or <code>npm start</code> to start the application
 
+You will need to download Expo dependencies to run the native of the application and will also require either andriod studio if on windows or xcode for macOS
+
 ## Introduction
 Final year of university project with both practical and theoretical thesis on mobile cloud application computing building a property mobile application using real time database and serverless backend services from AWS, Google Maps API and many more. 
 
