@@ -91,4 +91,11 @@ Through Amplify we can create an API using the amplify cli to connect to AppSync
 
 ## Building the Wishlist Screen
 
+Initially in the Home Screen, for each component rendered with the posts from GraphQL there is a heart vector icon rendered as well, using react navigation
+library we can transfer the data into the on going screen allowing us to transfer the data accross the application on render. With the passing of information we will request the ID again like in the Home screen so the selected property information can be saved through using the create query in our GraphQL model and adding it to our database. 
+
+![image](https://user-images.githubusercontent.com/77361838/210117869-75b8e79a-8446-4b29-9d71-1fc8952c1d86.png)
+
 ## Building the Messaging Screen
+
+
