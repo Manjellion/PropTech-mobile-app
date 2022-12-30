@@ -5,7 +5,9 @@ import Header from '../../components/Saved/Header'
 import dummyImg from '../../images/dummyImage.jpg'
 import Cards from '../../components/Saved/Cards'
 
-const SavedScreen = ({ navigation }) => {
+const SavedScreen = ({ navigation, route }) => {
+
+  const { id } = route.params;
 
   const dummyData = [
     {img: {dummyImg}, name: 'House1'},
@@ -15,6 +17,8 @@ const SavedScreen = ({ navigation }) => {
     {img: {dummyImg}, name: 'House5'},
     {img: {dummyImg}, name: 'House6'},
   ]
+
+
 
   const sectionChange = () => {
     // If no saved data then return this (store the data in an array)
@@ -44,14 +48,7 @@ const SavedScreen = ({ navigation }) => {
   return (
     <ScrollView style={{ backgroundColor: '#fff', flex: 1 }}>
       <Header />
-        {dummyData.map((cardInfo, key) => (
-          <TouchableOpacity onPress={() => navigation.navigate('InfoScreen')} key={key}>
-            <Cards 
-              img={dummyImg}
-              name={cardInfo.name}
-            />
-          </TouchableOpacity>
-        ))}
+
     </ScrollView>
   )
 }

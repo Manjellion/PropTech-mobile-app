@@ -77,7 +77,10 @@ const styles = StyleSheet.create({
         backgroundColor: 'white',
     },
     CardInfo: {
-        paddingLeft: 40
+        paddingVertical: 10,
+        paddingHorizontal: 40,
+        flexDirection: 'row',
+        justifyContent: 'space-between'
     },
     PostContainer: {
         flex: 1,

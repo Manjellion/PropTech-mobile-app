@@ -36,6 +36,10 @@ const HomeScreenNavigator = () => {
                 name="InfoScreen"
                 component={SavedInfo}
             />
+            <Stack.Screen 
+                name="SavedScreen"
+                component={SavedScreen}
+            />
         </Stack.Navigator>
     )
 }

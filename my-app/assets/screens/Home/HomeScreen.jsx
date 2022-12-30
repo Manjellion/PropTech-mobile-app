@@ -13,7 +13,6 @@ const HomeScreen = ({ navigation }) => {
   useEffect(() => {
       const fetchPost = async () => {
           try {
-
               const postsResult = await API.graphql(
                   graphqlOperation(listPosts)
               )
@@ -41,9 +40,16 @@ const HomeScreen = ({ navigation }) => {
                   source={{uri: item.image}}
               />
               <View style={styles.CardInfo}>
+                <View>
                   <Text>{item.title}</Text>
                   <Text>House by {item.subtitle}</Text>
                   <Text>Beds: {item.bedroom}</Text>
+                </View>
+                <TouchableOpacity onPress={() => navigation.navigate('SavedScreen', {
+                  id: itemID
+                })}>
+                    <AntDesign name='heart' color={'red'} size={26} />
+                </TouchableOpacity>
               </View>
         </TouchableOpacity>
       </View>

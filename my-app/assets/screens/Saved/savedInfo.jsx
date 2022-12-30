@@ -1,4 +1,4 @@
-import { View, Text, Image, ScrollView, TouchableOpacity, TextInput, FlatList } from 'react-native'
+import { View, Text, Image, ScrollView, TouchableOpacity, TextInput } from 'react-native'
 import React, { useEffect, useState } from 'react'
 import FontAwesome5 from 'react-native-vector-icons/FontAwesome5'
 import styles from '../../components/Saved/style'
@@ -25,30 +25,13 @@ const SavedInfo = ({ route }) => {
           variables: { id: id }
         })
         setItem(getData.data.getPost)
-        console.log(item);
+        console.log(getData);
       } catch(e) {
         console.log("Error: ", e);
       }
     }
-
     getEstateFunction();
   }, [])
-
-  // problem when rendering data before api fetches data, need to use a flatlist to render object information.
-  const renderTitle = ({ item }) => (
-    <View style={{ padding: 10 }}>
-      <Text style={styles.cardInfoHeader}>{item.title}</Text>
-      <Text style={styles.cardInfoTitle}>House by {item.subtitle}</Text>
-      <Image source={{ uri: item.image }} style={styles.cardInfoImage} />
-      <View style={styles.cardInfomation}>
-          <Text style={styles.cardInfoPrice}>For Sale: {item.price}</Text>
-          <Text style={styles.cardInfoPropertyInfo}><FontAwesome5 name='home' size={30} />  Property Type: {item.type}</Text>
-          <Text style={styles.cardInfoPropertyInfo}><FontAwesome5 name='car' size={30} />  Garage: {item.garage}</Text>
-          <Text style={styles.cardInfoPropertyInfo}><FontAwesome5 name='bed' size={30} />  Bedrooms: {item.bedroom}</Text>
-          <Text style={styles.cardInfoDesciprtion}>{item.description}</Text>
-      </View>
-    </View>
-);
 
   return (
     <ScrollView style={styles.cardInfoContainer}>
@@ -56,7 +39,8 @@ const SavedInfo = ({ route }) => {
       <Text style={styles.cardInfoTitle}>House by {item.subtitle}</Text>
       <Image source={{ uri: item.image }} style={styles.cardInfoImage} />
       <View style={styles.cardInfomation}>
-          <Text style={styles.cardInfoPrice}>For Sale: {item.price}</Text>
+        <Text style={styles.cardInfoPropertyInfo}>Listed at: {item.createdAt}</Text>
+          <Text style={styles.cardInfoPrice}>For Sale: ${item.price}</Text>
           <Text style={styles.cardInfoPropertyInfo}><FontAwesome5 name='home' size={30} />  Property Type: {item.type}</Text>
           <Text style={styles.cardInfoPropertyInfo}><FontAwesome5 name='car' size={30} />  Garage: {item.garage}</Text>
           <Text style={styles.cardInfoPropertyInfo}><FontAwesome5 name='bed' size={30} />  Bedrooms: {item.bedroom}</Text>
