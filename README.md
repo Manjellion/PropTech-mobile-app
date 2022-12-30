@@ -83,3 +83,12 @@ Using the command <code>expo init</code> choose a template etc, template for typ
 ### Profile Screen
 ![image](https://user-images.githubusercontent.com/77361838/197479332-5df492d4-9059-4e1f-a4b5-9ee529453cee.png)
 
+## Building the Home Screen
+
+Through Amplify we can create an API using the amplify cli to connect to AppSync so we have access to DynamoDB database and storing the property information to the database when the user uses a post request to our GraphQL server. Furthermore we will use GraphQL queries to list the posts into our home screen so users can view the properties listed by other users and can click on to be direct to an information screen on the selected property. Getting the correct information from the database to display in the info screen is done by requesting based on the ID of the initial press of the property in the home screen to be transferred into the info screen requesting the correct metadata from the database in dyanamoDB through GraphQL.
+
+![image](https://user-images.githubusercontent.com/77361838/210117667-3d775cbf-3055-49b8-8e8c-4ec1a33e1c0a.png)
+
+## Building the Wishlist Screen
+
+## Building the Messaging Screen
