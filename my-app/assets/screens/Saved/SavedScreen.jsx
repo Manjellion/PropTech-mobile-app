@@ -1,13 +1,12 @@
-import { ScrollView, TouchableOpacity, View } from 'react-native'
+import { ScrollView, Image, View, Text } from 'react-native'
 import React from 'react'
 
 import Header from '../../components/Saved/Header'
 import dummyImg from '../../images/dummyImage.jpg'
 import Cards from '../../components/Saved/Cards'
+import styles from '../../components/Saved/style'
 
-const SavedScreen = ({ navigation, route }) => {
-
-  const { id } = route.params;
+const SavedScreen = () => {
 
   const dummyData = [
     {img: {dummyImg}, name: 'House1'},
@@ -48,7 +47,21 @@ const SavedScreen = ({ navigation, route }) => {
   return (
     <ScrollView style={{ backgroundColor: '#fff', flex: 1 }}>
       <Header />
-
+      {
+        dummyData.map((data, key) => {
+          return (
+            <View key={key}>
+              <Image  
+                source={ data.img }
+                style={{
+                  width: 100
+                }}
+              />
+              <Text>{data.name}</Text>
+            </View>
+          )
+        })
+      }
     </ScrollView>
   )
 }

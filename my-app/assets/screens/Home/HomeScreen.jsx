@@ -45,10 +45,12 @@ const HomeScreen = ({ navigation }) => {
                   <Text>House by {item.subtitle}</Text>
                   <Text>Beds: {item.bedroom}</Text>
                 </View>
-                <TouchableOpacity onPress={() => navigation.navigate('SavedScreen', {
-                  id: itemID
-                })}>
-                    <AntDesign name='heart' color={'red'} size={26} />
+                <TouchableOpacity>
+                    <AntDesign name='heart' color={'red'} size={26} onPress={
+                      () => {
+                        
+                      }
+                    } />
                 </TouchableOpacity>
               </View>
         </TouchableOpacity>
@@ -61,6 +63,9 @@ const HomeScreen = ({ navigation }) => {
         <TouchableOpacity style={styles.SearchButton} onPress={() => navigation.navigate('Search')}>
           <AntDesign name='search1' size={17.5} />
           <Text style={styles.SearchText}>Search</Text>
+        </TouchableOpacity>
+        <TouchableOpacity onPress={() => navigation.navigate('SavedScreen')}>
+          <AntDesign name='shoppingcart' size={32} />
         </TouchableOpacity>
       </View>
       <View style={styles.HeroContainer}>

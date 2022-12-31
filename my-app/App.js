@@ -34,16 +34,6 @@ function App() {
                 }}  
               />
               <Tab.Screen 
-                name='Saved' 
-                component={SaveScreenNavigator} 
-                options={{
-                  tabBarLabel: 'Saved',
-                  tabBarIcon: ({ color, size }) => (
-                    <AntDesign name={'hearto'} color={color} size={size} />
-                  ),
-                }}  
-              />
-              <Tab.Screen 
                 name='Inbox' 
                 component={InboxScreenNavigator} 
                 options={{

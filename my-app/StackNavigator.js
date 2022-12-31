@@ -45,22 +45,6 @@ const HomeScreenNavigator = () => {
 }
 export {HomeScreenNavigator}
 
-const SaveScreenNavigator = () => {
-    return(
-        <Stack.Navigator>
-            <Stack.Screen 
-                name="SavedScreen"
-                component={SavedScreen}
-            />
-            <Stack.Screen 
-                name="InfoScreen"
-                component={SavedInfo}
-            />
-        </Stack.Navigator>
-    )
-}
-export {SaveScreenNavigator}
-
 const InboxScreenNavigator = () => {
     return(
         <Stack.Navigator>

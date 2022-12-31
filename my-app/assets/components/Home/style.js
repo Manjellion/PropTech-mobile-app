@@ -3,9 +3,14 @@ import { StyleSheet } from "react-native";
 const styles = StyleSheet.create({
     HeaderContainer: {
         flexDirection: 'row',
-        justifyContent: 'center',
+        justifyContent: 'space-evenly',
         alignItems: 'center',
         paddingTop: 10,
+        paddingHorizontal: 20
+    },
+    SavedIconContainer: {
+        flexDirection: 'row',
+        alignItems: 'center',
     },
     SearchButton: {
         width: '60%',
