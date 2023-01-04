@@ -1,14 +1,16 @@
-import { ScrollView, TouchableOpacity, View, Text, Image, FlatList } from 'react-native'
+import { ScrollView, TouchableOpacity, View, Text, Image, FlatList, Modal, Alert } from 'react-native'
 import React, { useEffect, useState } from 'react'
 import styles from '../../components/Home/style'
 import AntDesign from 'react-native-vector-icons/AntDesign'
 import { API, graphqlOperation } from 'aws-amplify'
-import { listPosts } from '../../../src/graphql/queries'
+import { listPosts, getPost } from '../../../src/graphql/queries'
+import { createSaved } from '../../../src/graphql/mutations'
 
 const HomeScreen = ({ navigation }) => {
 
   const [ posts, setPosts] = useState([]);
   const [ itemID, setItemID ] = useState();
+  const [ saveItemID, setSaveItemID ] = useState([]);
 
   useEffect(() => {
       const fetchPost = async () => {
@@ -25,6 +27,31 @@ const HomeScreen = ({ navigation }) => {
 
       fetchPost();
   }, [])
+
+  const dataAddToSave= {
+    title: saveItemID.title,
+    subtitle: saveItemID.subtitle,
+    bedroom: saveItemID.bedroom,
+    image: saveItemID.image,
+    description: saveItemID.description,
+    garage: saveItemID.garage,
+    price: saveItemID.price,
+    type: saveItemID.type
+}
+
+  async function saveItemToWishlist() {
+    try {
+      await API.graphql(
+        graphqlOperation(createSaved, { 
+          input: dataAddToSave
+        })
+      )
+      console.log("Successfully added to Saves");
+      Alert.alert("Added to Save")
+    } catch(err) {
+      console.log("Error:", err);
+    }
+  };
 
   const renderTitle = ({ item }) => (
       <View style={styles.CardBoxContainer}>
@@ -48,7 +75,9 @@ const HomeScreen = ({ navigation }) => {
                 <TouchableOpacity>
                     <AntDesign name='heart' color={'red'} size={26} onPress={
                       () => {
-                        
+                        setSaveItemID(item)
+                        console.log(saveItemID)
+                        saveItemToWishlist()
                       }
                     } />
                 </TouchableOpacity>

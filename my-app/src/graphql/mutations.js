@@ -106,3 +106,66 @@ export const deletePost = /* GraphQL */ `
     }
   }
 `;
+export const createSaved = /* GraphQL */ `
+  mutation CreateSaved(
+    $input: CreateSavedInput!
+    $condition: ModelSavedConditionInput
+  ) {
+    createSaved(input: $input, condition: $condition) {
+      id
+      image
+      title
+      subtitle
+      description
+      price
+      type
+      bedroom
+      garage
+      createdAt
+      updatedAt
+      owner
+    }
+  }
+`;
+export const updateSaved = /* GraphQL */ `
+  mutation UpdateSaved(
+    $input: UpdateSavedInput!
+    $condition: ModelSavedConditionInput
+  ) {
+    updateSaved(input: $input, condition: $condition) {
+      id
+      image
+      title
+      subtitle
+      description
+      price
+      type
+      bedroom
+      garage
+      createdAt
+      updatedAt
+      owner
+    }
+  }
+`;
+export const deleteSaved = /* GraphQL */ `
+  mutation DeleteSaved(
+    $input: DeleteSavedInput!
+    $condition: ModelSavedConditionInput
+  ) {
+    deleteSaved(input: $input, condition: $condition) {
+      id
+      image
+      title
+      subtitle
+      description
+      price
+      type
+      bedroom
+      garage
+      createdAt
+      updatedAt
+      owner
+    }
+  }
+`;

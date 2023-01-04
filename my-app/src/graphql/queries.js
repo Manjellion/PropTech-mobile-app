@@ -73,3 +73,46 @@ export const listPosts = /* GraphQL */ `
     }
   }
 `;
+export const getSaved = /* GraphQL */ `
+  query GetSaved($id: ID!) {
+    getSaved(id: $id) {
+      id
+      image
+      title
+      subtitle
+      description
+      price
+      type
+      bedroom
+      garage
+      createdAt
+      updatedAt
+      owner
+    }
+  }
+`;
+export const listSaveds = /* GraphQL */ `
+  query ListSaveds(
+    $filter: ModelSavedFilterInput
+    $limit: Int
+    $nextToken: String
+  ) {
+    listSaveds(filter: $filter, limit: $limit, nextToken: $nextToken) {
+      items {
+        id
+        image
+        title
+        subtitle
+        description
+        price
+        type
+        bedroom
+        garage
+        createdAt
+        updatedAt
+        owner
+      }
+      nextToken
+    }
+  }
+`;

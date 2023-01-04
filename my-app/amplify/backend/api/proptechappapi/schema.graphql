@@ -26,3 +26,22 @@ type Post @model
   garage: Int!
   
 }
+
+type Saved @model 
+  @auth(rules: [
+    { allow: groups, groups: ["Admin"]},
+    { allow: owner}
+  ]) {
+  id: ID!
+  
+  image: String!
+  title: String!
+  subtitle: String!
+  description: String!
+
+  price: Int!
+  type: String!
+  bedroom: Int!
+  garage: Int!
+  
+}

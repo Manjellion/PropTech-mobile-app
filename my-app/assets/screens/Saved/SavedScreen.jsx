@@ -1,67 +1,47 @@
-import { ScrollView, Image, View, Text } from 'react-native'
-import React from 'react'
+import { ScrollView, Image, View, Text, FlatList, TouchableOpacity } from 'react-native'
+import React, { useEffect, useState } from 'react'
 
 import Header from '../../components/Saved/Header'
-import dummyImg from '../../images/dummyImage.jpg'
 import Cards from '../../components/Saved/Cards'
-import styles from '../../components/Saved/style'
+
+import { listSaveds } from '../../../src/graphql/queries'
+import { API, graphqlOperation } from 'aws-amplify'
 
 const SavedScreen = () => {
 
-  const dummyData = [
-    {img: {dummyImg}, name: 'House1'},
-    {img: {dummyImg}, name: 'House2'},
-    {img: {dummyImg}, name: 'House3'},
-    {img: {dummyImg}, name: 'House4'},
-    {img: {dummyImg}, name: 'House5'},
-    {img: {dummyImg}, name: 'House6'},
-  ]
+  const [ saved, setSaved ] = useState([]);
 
+  useEffect(function() {
+    const fetchSavedItems = async () => {
+      try {
+        const savedItems = await API.graphql(
+          graphqlOperation(listSaveds)
+        )
+        setSaved(savedItems.data.listSaveds.items);
+        console.log(savedItems.data.listSaveds.items);
+      } catch(err) {
+        console.error("Error:", err);
+      }
+    };
+    fetchSavedItems()
+  }, []);
 
-
-  const sectionChange = () => {
-    // If no saved data then return this (store the data in an array)
-    if (dummyData.length == 0) {
-      return <View style={styles.headerText}>
-              <Text style={styles.HeaderTextMain}>Create you first wishlist</Text>
-              <Text style={styles.HeaderTextSub}>
-                  As you search, tap the heart icon to save your 
-                  favourite places to stay or things to do to a
-                  wishlist
-              </Text>
-            </View>
-  
-    } else {
-      return <View>
-        {dummyData.map((cardInfo, key) => (
-          <Cards
-            key={key}
-            img = {cardInfo.img}
-            name = {cardInfo.name}
-          />
-        ))}
-      </View>
-    }
-  }
+  const renderTitle = ({ item }) => (
+    <TouchableOpacity onPress={() => console.log(item.id)}>
+      <Cards 
+        img={item.image}
+        name={item.title}
+      />
+    </TouchableOpacity>
+  );
 
   return (
     <ScrollView style={{ backgroundColor: '#fff', flex: 1 }}>
       <Header />
-      {
-        dummyData.map((data, key) => {
-          return (
-            <View key={key}>
-              <Image  
-                source={ data.img }
-                style={{
-                  width: 100
-                }}
-              />
-              <Text>{data.name}</Text>
-            </View>
-          )
-        })
-      }
+      <FlatList 
+        data={saved}
+        renderItem={renderTitle}
+      />
     </ScrollView>
   )
 }

@@ -33,7 +33,7 @@ const styles = StyleSheet.create({
         borderRadius: 10
     },
     cardText: {
-        marginRight: 100,
+        marginRight: 25,
         fontWeight: '500'
     },
     cardInfoContainer: {

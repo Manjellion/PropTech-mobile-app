@@ -17,8 +17,8 @@ const SavedInfo = ({ route }) => {
   
   const { id } = route.params;
 
-  useEffect(() => {
-    const getEstateFunction = async () => {
+  useEffect(function() {
+    async function getEstateFunction() {
       try {
         const getData = await API.graphql({
           query: queries.getPost,
