@@ -20,12 +20,27 @@ const styles = StyleSheet.create({
         color: 'grey',
         paddingVertical: 5
     },
+    cardContainerOnScreen: {
+        paddingVertical: 20
+    },
     cardContainer: {
         flexDirection: 'row',
         alignItems: 'center',
         justifyContent: 'space-between',
         paddingVertical: 10,
-        padding: 25
+        paddingHorizontal: 10,
+    },
+    cardDeleteButtonContainer: {
+        paddingLeft: 10,
+        width: '40%'
+    },
+    cardDeleteButtonText: {
+        padding: 10,
+        backgroundColor: '#e91e63',
+        color: '#fff',
+        textAlign: 'center',
+        fontSize: 14,
+        fontWeight: '500'
     },
     cardImg: {
         width: 160,
@@ -34,7 +49,13 @@ const styles = StyleSheet.create({
     },
     cardText: {
         marginRight: 25,
-        fontWeight: '500'
+        fontWeight: '500',
+        fontSize: 15,
+        backgroundColor: '#000',
+        padding: 20,
+        position: 'absolute',
+        right: -30,
+        color: '#fff'
     },
     cardInfoContainer: {
         flex: 1,
