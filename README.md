@@ -120,3 +120,7 @@ The different types of messages that can be shown to users are:
 Unlike traditional push notifications, in-app messages are synced to your user’s device locally so that when an analytics event triggers them, they can be displayed instantly. An added benefit to in-app messages being locally stored is that, once synced, in-app messages can work even in offline use cases.
 
 ![image](https://user-images.githubusercontent.com/77361838/211037373-42a764bd-de16-4ae0-8796-ff24eb55e8c3.png)
+
+### Messaging Chatrooms
+
+Using graphql we can set up a relational table between users and its messages within a chatroom data mode;, each entity mentioned is a table within the database designed and will be connected with a one to many relationship to request and send data of messages between connected users within the application. 
