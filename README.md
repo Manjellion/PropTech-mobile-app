@@ -124,3 +124,5 @@ Unlike traditional push notifications, in-app messages are synced to your userâ€
 ### Messaging Chatrooms
 
 Using graphql we can set up a relational table between users and its messages within a chatroom data mode;, each entity mentioned is a table within the database designed and will be connected with a one to many relationship to request and send data of messages between connected users within the application. 
+
+![image](https://user-images.githubusercontent.com/77361838/211064891-23305116-6fb2-44ea-8675-1b6dc28e5df2.png)
