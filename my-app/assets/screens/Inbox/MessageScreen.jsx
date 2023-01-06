@@ -1,15 +1,37 @@
 import { View, Text, Image } from 'react-native'
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import styles from '../../components/Inbox/styles'
+import { getUser } from '../../../src/graphql/queries'
+import { API } from 'aws-amplify'
 
-const MessageScreen = () => {
+const MessageScreen = ({ route }) => {
+
+  const { id } = route.params;
+
+  const [ item, setItem ] = useState([]);
+
+  useEffect(function() {
+    async function getEstateFunction() {
+      try {
+        const getData = await API.graphql({
+          query: getUser,
+          variables: { id: id }
+        })
+        setItem(getData.data.getUser)
+        console.log(item.username);
+      } catch(e) {
+        console.log("Error: ", e);
+      }
+    }
+    getEstateFunction();
+  }, [])
+  
   return (
     <View style={styles.messageScreenContainer}>
       <View style={styles.messageScreenHeader}>
-        <Text style={styles.messageScreenHeaderUsername}>Username</Text>
-        <Image source={{uri: 'https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80'}} style={styles.messageScreenHeaderImg} />
+        <Text style={styles.messageScreenHeaderUsername}>{item.username}</Text>
+        <Text>{item.email}</Text>
       </View>
-
     </View>
   )
 }

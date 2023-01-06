@@ -1,47 +1,43 @@
-type User @model
-  @auth(rules: [
-    { allow: groups, groups: ["Admin"] },
-    { allow: owner, ownerField: "username", operations: [read] }
-  ]) {
+type ChatRoom @model @auth(rules: [{allow: private}]) {
+  id: ID!
+  Messages: [Message] @hasMany(indexName: "byChatRoom", fields: ["id"])
+}
+
+type Message @model @auth(rules: [{allow: private}]) {
+  id: ID!
+  Text: String
+  chatroomID: ID! @index(name: "byChatRoom")
+  userID: ID! @index(name: "byUser")
+}
+
+type User @model @auth(rules: [{allow: groups, groups: ["Admin"]}, {allow: owner, ownerField: "username", operations: [read]}]) {
   id: ID!
   username: String!
-  email: String! 
+  email: String!
+  Messages: [Message] @hasMany(indexName: "byUser", fields: ["id"])
 }
 
-type Post @model 
-  @auth(rules: [
-    { allow: groups, groups: ["Admin"]},
-    { allow: owner}
-  ]) {
+type Post @model @auth(rules: [{allow: groups, groups: ["Admin"]}, {allow: owner}]) {
   id: ID!
-
   image: String!
   title: String!
   subtitle: String!
   description: String!
-
   price: Int!
   type: String!
   bedroom: Int!
   garage: Int!
-  
 }
 
-type Saved @model 
-  @auth(rules: [
-    { allow: groups, groups: ["Admin"]},
-    { allow: owner}
-  ]) {
+type Saved @model @auth(rules: [{allow: groups, groups: ["Admin"]}, {allow: owner}]) {
   id: ID!
-  
   image: String!
   title: String!
   subtitle: String!
   description: String!
-
   price: Int!
   type: String!
   bedroom: Int!
   garage: Int!
-  
 }
+ 

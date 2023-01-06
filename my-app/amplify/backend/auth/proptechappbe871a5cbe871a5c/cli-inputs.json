@@ -2,7 +2,7 @@
   "version": "1",
   "cognitoConfig": {
     "identityPoolName": "proptechappbe871a5c_identitypool_be871a5c",
-    "allowUnauthenticatedIdentities": false,
+    "allowUnauthenticatedIdentities": true,
     "resourceNameTruncated": "proptebe871a5c",
     "userPoolName": "proptechappbe871a5c_userpool_be871a5c",
     "autoVerifiedAttributes": [
@@ -80,7 +80,9 @@
     "parentStack": {
       "Ref": "AWS::StackId"
     },
-    "authTriggerConnections": "[\n  {\n    \"triggerType\": \"PostConfirmation\",\n    \"lambdaFunctionName\": \"proptechappbe871a5cbe871a5cPostConfirmation\"\n  }\n]",
+    "authTriggerConnections": [
+      "{\"triggerType\":\"PostConfirmation\",\"lambdaFunctionName\":\"proptechappbe871a5cbe871a5cPostConfirmation\"}"
+    ],
     "permissions": []
   }
 }

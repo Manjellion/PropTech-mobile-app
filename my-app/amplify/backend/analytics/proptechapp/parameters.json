@@ -1,0 +1,22 @@
+{
+  "appName": "proptechapp",
+  "roleName": "pinpointLambdaRoleeba22902",
+  "cloudformationPolicyName": "cloudformationPolicyeba22902",
+  "cloudWatchPolicyName": "cloudWatchPolicyeba22902",
+  "pinpointPolicyName": "pinpointPolicyeba22902",
+  "authPolicyName": "pinpoint_amplify_eba22902",
+  "unauthPolicyName": "pinpoint_amplify_eba22902",
+  "authRoleName": {
+    "Ref": "AuthRoleName"
+  },
+  "unauthRoleName": {
+    "Ref": "UnauthRoleName"
+  },
+  "authRoleArn": {
+    "Fn::GetAtt": [
+      "AuthRole",
+      "Arn"
+    ]
+  },
+  "pinpointInAppMessagingPolicyName": "pinpointInAppMessagingPolicyNameeba22902"
+}

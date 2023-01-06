@@ -25,6 +25,21 @@
       },
       "api": {
         "proptechappapi": {}
+      },
+      "notifications": {
+        "Pinpoint": {
+          "Name": "proptechapp-dev",
+          "Id": "79a225c25e26462fa5de1e0d805ceb25",
+          "Region": "eu-west-2"
+        }
+      },
+      "analytics": {
+        "Pinpoint": {
+          "Name": "proptechapp-dev",
+          "Id": "79a225c25e26462fa5de1e0d805ceb25",
+          "Region": "eu-west-2"
+        },
+        "proptechapp": {}
       }
     }
   }
