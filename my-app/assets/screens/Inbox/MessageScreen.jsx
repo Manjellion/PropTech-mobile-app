@@ -2,7 +2,8 @@ import { View, Text, Image } from 'react-native'
 import React, { useState, useEffect } from 'react'
 import styles from '../../components/Inbox/styles'
 import { getUser } from '../../../src/graphql/queries'
-import { API } from 'aws-amplify'
+import { listChatRooms } from './queries'
+import { API, graphqlOperation } from 'aws-amplify'
 
 const MessageScreen = ({ route }) => {
 
@@ -11,25 +12,20 @@ const MessageScreen = ({ route }) => {
   const [ item, setItem ] = useState([]);
 
   useEffect(function() {
-    async function getEstateFunction() {
-      try {
-        const getData = await API.graphql({
-          query: getUser,
-          variables: { id: id }
-        })
-        setItem(getData.data.getUser)
-        console.log(item.username);
-      } catch(e) {
-        console.log("Error: ", e);
-      }
-    }
-    getEstateFunction();
+    const fetchChatRooms = async () => {
+      const response = await API.graphql(
+        graphqlOperation(listChatRooms)
+      );
+      console.log(response);
+    };
+
+    fetchChatRooms()
   }, [])
   
   return (
     <View style={styles.messageScreenContainer}>
       <View style={styles.messageScreenHeader}>
-        <Text style={styles.messageScreenHeaderUsername}>{item.username}</Text>
+        <Text style={styles.messageScreenHeaderUsername}>{item}</Text>
         <Text>{item.email}</Text>
       </View>
     </View>

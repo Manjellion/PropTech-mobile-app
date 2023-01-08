@@ -1,6 +1,7 @@
 type ChatRoom @model @auth(rules: [{allow: private}]) {
   id: ID!
   Messages: [Message] @hasMany(indexName: "byChatRoom", fields: ["id"])
+  LastMessage: Message @hasOne
 }
 
 type Message @model @auth(rules: [{allow: private}]) {

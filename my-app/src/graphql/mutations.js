@@ -1,6 +1,147 @@
 /* eslint-disable */
 // this is an auto generated file. This will be overwritten
 
+export const createChatRoom = /* GraphQL */ `
+  mutation CreateChatRoom(
+    $input: CreateChatRoomInput!
+    $condition: ModelChatRoomConditionInput
+  ) {
+    createChatRoom(input: $input, condition: $condition) {
+      id
+      Messages {
+        items {
+          id
+          Text
+          chatroomID
+          userID
+          createdAt
+          updatedAt
+        }
+        nextToken
+      }
+      LastMessage {
+        id
+        Text
+        chatroomID
+        userID
+        createdAt
+        updatedAt
+      }
+      createdAt
+      updatedAt
+      chatRoomLastMessageId
+    }
+  }
+`;
+export const updateChatRoom = /* GraphQL */ `
+  mutation UpdateChatRoom(
+    $input: UpdateChatRoomInput!
+    $condition: ModelChatRoomConditionInput
+  ) {
+    updateChatRoom(input: $input, condition: $condition) {
+      id
+      Messages {
+        items {
+          id
+          Text
+          chatroomID
+          userID
+          createdAt
+          updatedAt
+        }
+        nextToken
+      }
+      LastMessage {
+        id
+        Text
+        chatroomID
+        userID
+        createdAt
+        updatedAt
+      }
+      createdAt
+      updatedAt
+      chatRoomLastMessageId
+    }
+  }
+`;
+export const deleteChatRoom = /* GraphQL */ `
+  mutation DeleteChatRoom(
+    $input: DeleteChatRoomInput!
+    $condition: ModelChatRoomConditionInput
+  ) {
+    deleteChatRoom(input: $input, condition: $condition) {
+      id
+      Messages {
+        items {
+          id
+          Text
+          chatroomID
+          userID
+          createdAt
+          updatedAt
+        }
+        nextToken
+      }
+      LastMessage {
+        id
+        Text
+        chatroomID
+        userID
+        createdAt
+        updatedAt
+      }
+      createdAt
+      updatedAt
+      chatRoomLastMessageId
+    }
+  }
+`;
+export const createMessage = /* GraphQL */ `
+  mutation CreateMessage(
+    $input: CreateMessageInput!
+    $condition: ModelMessageConditionInput
+  ) {
+    createMessage(input: $input, condition: $condition) {
+      id
+      Text
+      chatroomID
+      userID
+      createdAt
+      updatedAt
+    }
+  }
+`;
+export const updateMessage = /* GraphQL */ `
+  mutation UpdateMessage(
+    $input: UpdateMessageInput!
+    $condition: ModelMessageConditionInput
+  ) {
+    updateMessage(input: $input, condition: $condition) {
+      id
+      Text
+      chatroomID
+      userID
+      createdAt
+      updatedAt
+    }
+  }
+`;
+export const deleteMessage = /* GraphQL */ `
+  mutation DeleteMessage(
+    $input: DeleteMessageInput!
+    $condition: ModelMessageConditionInput
+  ) {
+    deleteMessage(input: $input, condition: $condition) {
+      id
+      Text
+      chatroomID
+      userID
+      createdAt
+      updatedAt
+    }
+  }
+`;
 export const createUser = /* GraphQL */ `
   mutation CreateUser(
     $input: CreateUserInput!
@@ -10,6 +151,17 @@ export const createUser = /* GraphQL */ `
       id
       username
       email
+      Messages {
+        items {
+          id
+          Text
+          chatroomID
+          userID
+          createdAt
+          updatedAt
+        }
+        nextToken
+      }
       createdAt
       updatedAt
     }
@@ -24,6 +176,17 @@ export const updateUser = /* GraphQL */ `
       id
       username
       email
+      Messages {
+        items {
+          id
+          Text
+          chatroomID
+          userID
+          createdAt
+          updatedAt
+        }
+        nextToken
+      }
       createdAt
       updatedAt
     }
@@ -38,6 +201,17 @@ export const deleteUser = /* GraphQL */ `
       id
       username
       email
+      Messages {
+        items {
+          id
+          Text
+          chatroomID
+          userID
+          createdAt
+          updatedAt
+        }
+        nextToken
+      }
       createdAt
       updatedAt
     }
