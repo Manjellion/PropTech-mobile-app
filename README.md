@@ -1,4 +1,4 @@
-# Rental Sky
+# Prop Tech Application
 
 ## Get Started 
 
