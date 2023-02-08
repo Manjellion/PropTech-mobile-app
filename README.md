@@ -1,4 +1,4 @@
-# Rental Sky
+# Prop Tech Application
 
 ## Get Started 
 
@@ -126,3 +126,7 @@ Unlike traditional push notifications, in-app messages are synced to your userâ€
 Using graphql we can set up a relational table between users and its messages within a chatroom data mode;, each entity mentioned is a table within the database designed and will be connected with a one to many relationship to request and send data of messages between connected users within the application. 
 
 ![image](https://user-images.githubusercontent.com/77361838/211064891-23305116-6fb2-44ea-8675-1b6dc28e5df2.png)
+
+## Cloud Arhitecture Model (AWS)
+
+![image](https://user-images.githubusercontent.com/77361838/213922397-dd31cac9-6f48-4b42-b1cf-dcaa006c17f2.png)
