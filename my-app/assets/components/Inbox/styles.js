@@ -1,70 +1,59 @@
 import { StyleSheet } from "react-native";
 
 const styles = StyleSheet.create({
-    headerContainer: {
-        paddingVertical: 5
-    },  
-    header: {
-        fontSize: 40,
-        fontWeight: '500',
-        paddingBottom: 15
-    },
-    subHeader: {
-        fontSize: 15,
-        fontWeight: '300',
-        paddingTop: 15
-    },
-    msgCardContainer: {
-        flexDirection: 'row',
-        borderWidth: .5,
-        borderRightWidth: 0,
-        borderLeftWidth: 0,
-        padding: 10
-    },
-    msgCardImg: {
-        width: 100,
-        height: 100,
-        borderRadius: 50,
-        borderWidth: .5
-    },
-    msgCardText: {
-        maxWidth: '75%',
-        padding: 15
-        
-    },
-    msgCardUsername: {
-        fontSize: 20,
-        marginVertical: 10,
-        justifyContent: 'flex-start'
-    },
-    msgCardUserMsg: {
-        justifyContent: 'flex-end'
-    },
-    mainScreenContainer: {
+    Container: {
         flex: 1,
-        backgroundColor: '#fff',
-        paddingHorizontal: 35
+        backgroundColor: "#fff"
     },
-    messageScreenContainer: {
+    KeyboardAvoidContainer: {
         flex: 1,
-        backgroundColor: '#fff',
-        paddingHorizontal: 35,
-        paddingVertical: 10
+        backgroundColor: "#fff"
     },
-    messageScreenHeader: {
-        flexDirection: 'row',
-        justifyContent: 'space-between',
-        alignItems: 'center'
+    Messages: {
+        flex: 1,
     },
-    messageScreenHeaderUsername: {
-        fontSize: 20
+    MessageScroller: {
+        top: 0,
+        right: 0,
+        left: 0,
+        bottom: 0,
+        display: "flex",
+        flexDirection: "column",
+        padding: 16,
+        overflow: "scroll"
     },
-    messageScreenHeaderImg: {
-        height: 100,
-        width: 100,
-        borderRadius: 50
+    Message: {
+        alignSelf: "flex-start",
+        marginTop: 4,
+        paddingVertical: 8,
+        paddingHorizontal: 12,
+        maxWidth: 240,
+        backgroundColor: "#f1f0f0",
+        borderRadius: 16,
+        fontSize: 14
+    },
+    UserMessage: {
+        alignSelf: "flex-end",
+        backgroundColor: "#f19e38",
+        color: "#fff"
+    },
+    ChatBar: {
+        height: 150,
+        borderTopWidth: 1,
+        borderColor: "#ddd",
+    },
+    ChatBarForm: {
+        height: "100%",
+        padding: 16
+    },
+    ChatBarInput: {
+        height: 40, 
+        width: '100%', 
+        backgroundColor: '#fff', 
+        paddingLeft: 10, 
+        justifySelf: 'flex-end', 
+        color: '#fff'
     }
-
 })
 
 export default styles;
