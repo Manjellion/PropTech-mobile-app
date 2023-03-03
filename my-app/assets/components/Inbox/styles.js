@@ -49,10 +49,13 @@ const styles = StyleSheet.create({
     ChatBarInput: {
         height: 40, 
         width: '100%', 
-        backgroundColor: '#fff', 
+        backgroundColor: 'lightgrey', 
         paddingLeft: 10, 
-        justifySelf: 'flex-end', 
-        color: '#fff'
+    },
+    ChatBarSendBtn: {
+        padding: 10,
+        marginTop: 10,
+        backgroundColor: '#e91e63'
     }
 })
 

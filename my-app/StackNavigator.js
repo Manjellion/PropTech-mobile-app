@@ -40,6 +40,10 @@ const HomeScreenNavigator = () => {
                 name="SavedScreen"
                 component={SavedScreen}
             />
+            <Stack.Screen 
+                name="MessageScreen"
+                component={MessageScreen}
+            />
         </Stack.Navigator>
     )
 }

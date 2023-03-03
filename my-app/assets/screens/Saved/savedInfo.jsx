@@ -5,7 +5,7 @@ import styles from '../../components/Saved/style'
 import * as queries from '../../../src/graphql/queries'
 import { API } from 'aws-amplify'
 
-const SavedInfo = ({ route }) => {
+const SavedInfo = ({ route, navigation }) => {
   
   // initialise a state variable for the textinput in form section and update the variable upon change and being sent to agent
   const [ name, onChangeName ] = useState('Full name')
@@ -47,7 +47,7 @@ const SavedInfo = ({ route }) => {
           <Text style={styles.cardInfoDesciprtion}>{item.description}</Text>
       </View>
       <View style={styles.cardInfoContact}>
-        <TouchableOpacity style={styles.cardInfoContactMsgBtn}>
+        <TouchableOpacity style={styles.cardInfoContactMsgBtn} onPress={() => navigation.navigate('MessageScreen')}>
           <Text style={styles.cardInfoContactMsgBtnText}>Message them now</Text>
         </TouchableOpacity>
         <Text>or</Text>
