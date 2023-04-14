@@ -8,14 +8,15 @@ import Search from './assets/screens/Home/Search';
 import PostEstate from './assets/screens/Home/PostEstate';
 
 import SavedScreen from './assets/screens/Saved/SavedScreen';
-import SavedInfo from './assets/screens/Saved/SavedInfo';
+import SavedInfo from './assets/screens/Saved/savedInfo';
 
-import InboxScreen from './assets/screens/Inbox/InboxScreen';
+import InboxScreen from './assets/screens/Inbox/inboxScreen';
 import MessageScreen from './assets/screens/Inbox/MessageScreen';
 
 import SettingsScreen from './assets/screens/Profile/SettingSceen';
 import ProfilesScreen from './assets/screens/Profile/ProfileScreen'
 import { NotificationScreen, PersonalInfoScreen, PrivacyInfoScreen } from './assets/screens/Setting/export'
+import EditProfile from './assets/screens/Profile/EditProfile';
 
 const HomeScreenNavigator = () => {
     return(
@@ -75,6 +76,10 @@ const ProfileScreenNavigator = () => {
             <Stack.Screen 
                 name="ProfileScreen"
                 component={ProfilesScreen}
+            />
+            <Stack.Screen 
+                name="EditProfileScreen"
+                component={EditProfile}
             />
             <Stack.Screen 
                 name="Personal information"

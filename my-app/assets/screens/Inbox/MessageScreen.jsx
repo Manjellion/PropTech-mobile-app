@@ -39,11 +39,12 @@ const MessageScreen = () => {
   return (
     <SafeAreaView style={styles.Container}>
       <KeyboardAvoidingView style={styles.KeyboardAvoidContainer} behavior="padding">
+        <Text style={styles.MessagerNameID}>Dave</Text>
         <View style={styles.Messages}>
           <ScrollView style={styles.MessageScroller}>
             {
               messages.map((message) => (
-                <Text key={message.id}>
+                <Text key={message.id} style={styles.Message}>
                   {message.Text}
                 </Text>
               ))

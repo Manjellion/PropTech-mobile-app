@@ -1,8 +1,7 @@
-import { ScrollView, TouchableOpacity, View, FlatList, Text } from 'react-native'
+import { TouchableOpacity, Text, View } from 'react-native'
 import React, { useEffect, useState } from 'react'
-import Header from '../../components/Inbox/Header'
-import MsgCard from '../../components/Inbox/MsgCard'
 import styles from '../../components/Inbox/styles'
+import FontAwesome5 from 'react-native-vector-icons/FontAwesome5'
 
 import { listMessages} from '../../../src/graphql/queries'
 
@@ -13,7 +12,7 @@ const InboxScreen = ({ navigation }) => {
   const [user, setUser] = useState([]);
 
   useEffect(() => {
-     const fetchMessage = async () => {
+    const fetchMessage = async () => {
       try {
         const getMessage = API.graphql(
           graphqlOperation(listMessages)
@@ -22,10 +21,13 @@ const InboxScreen = ({ navigation }) => {
       } catch(e) {
         console.log(e);
       }
-     }
-
-     fetchMessage()
+    }
+    fetchMessage()
   }, [])
+
+  const item = [
+    {name: 'Dave', preMessage: 'How are you'}
+  ]
 
   const renderTitle = ({ item }) => (
     <TouchableOpacity>
@@ -36,11 +38,24 @@ const InboxScreen = ({ navigation }) => {
   )
 
   return (
-    <TouchableOpacity onPress={() =>   navigation.navigate('MessageScreen')}>
-    <Text>
-      Dave
-    </Text>
-  </TouchableOpacity>
+    <View style={styles.ContainerInbox}>
+      <View style={styles.InboxList}>
+        <TouchableOpacity 
+          style={styles.InboxItem}
+          onPress={() =>  navigation.navigate('MessageScreen')}
+        >
+          <FontAwesome5 name='user-circle' size={100} />
+          <View style={styles.InboxItemInfo}>
+            <Text style={styles.InboxItemInfoName}>
+              {item[0].name}
+            </Text>
+            <Text style={styles.InboxItemInfoPreMessage}>
+              {item[0].preMessage}
+            </Text>
+          </View>
+        </TouchableOpacity>
+      </View>
+    </View>
   )
 }
 

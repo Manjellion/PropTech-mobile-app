@@ -3,7 +3,7 @@ import styles from '../../components/Home/style'
 import React, { useEffect, useState } from 'react'
 import { SafeAreaView } from 'react-native-safe-area-context'
 
-const Search = () => {
+const Search = ({ navigation }) => {
 
   const [search, setSearch ] = useState('')
   const [FilteredDataSource, setFilteredDataSource] = useState([])
@@ -49,7 +49,7 @@ const Search = () => {
   const ItemView = ({item}) => {
     return (
       // Flat List Item
-      <Text onPress={() => getItem(item)}>
+      <Text onPress={() => navigation.navigate('InfoScreen')}>
         {item.id}
         {'.'}
         {item.title.toUpperCase()}
@@ -70,11 +70,6 @@ const Search = () => {
       />
     )
   }
-
-  const getItem = (item) => {
-    // Function for click on an item
-    alert('Id : ' + item.id + ' Title : ' + item.title);
-  };
 
   return (
     <View style={styles.searchContainer}>

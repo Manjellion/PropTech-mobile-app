@@ -93,7 +93,24 @@ const styles = StyleSheet.create({
         color: '#fff',
         fontWeight: '500',
         fontSize: 15
-    }
+    },
+    EditContainer: {
+        flex: 1,
+        backgroundColor: 'white',
+        padding: 20
+    },
+    EditProfileNameContainer: {
+        display: 'flex',
+        flexDirection: 'row',
+        alignItems: 'center',
+        paddingTop: 10,
+        paddingBottom: 30
+    },
+    EditProfileName: {
+        backgroundColor: 'lightgrey',
+        width: 200,
+        paddingLeft: 5
+    },
 })
 
 export default styles;

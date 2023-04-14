@@ -1,6 +1,32 @@
 import { StyleSheet } from "react-native";
 
 const styles = StyleSheet.create({
+    /* For Inbox Screen */
+    ContainerInbox: {
+        flex: 1,
+        backgroundColor: '#fff'
+    },
+    InboxList: {
+        paddingHorizontal: 30,
+        display: 'flex',
+        borderWidth: .75,
+        paddingVertical: 15
+    },
+    InboxItem: {
+        flexDirection: 'row',
+    },
+    InboxItemInfo: {
+        paddingTop: 10,
+        paddingLeft: 20
+    },
+    InboxItemInfoName: {
+        fontSize: 20,
+        fontWeight: '500',
+    },
+    InboxItemInfoPreMessage: {
+        paddingTop: 10,
+    },
+    /* For Meesage Screen */
     Container: {
         flex: 1,
         backgroundColor: "#fff"
@@ -8,6 +34,12 @@ const styles = StyleSheet.create({
     KeyboardAvoidContainer: {
         flex: 1,
         backgroundColor: "#fff"
+    },
+    MessagerNameID: {
+        fontSize: 25,
+        fontWeight: '500',
+        paddingLeft: 20,
+        borderBottomWidth: .5
     },
     Messages: {
         flex: 1,
@@ -20,10 +52,10 @@ const styles = StyleSheet.create({
         display: "flex",
         flexDirection: "column",
         padding: 16,
-        overflow: "scroll"
+        overflow: "scroll",
     },
     Message: {
-        alignSelf: "flex-start",
+        alignSelf: "flex-end",
         marginTop: 4,
         paddingVertical: 8,
         paddingHorizontal: 12,

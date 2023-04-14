@@ -5,7 +5,7 @@ import styles from '../../components/Profile/styles'
 
 import { Auth } from 'aws-amplify'
 
-const ProfileScreen = () => {
+const ProfileScreen = ({ navigation }) => {
 
   const [nameOfUser, setNameOfUser] = useState();
   const [emailOfUser, setEmailOfUser] = useState();
@@ -30,7 +30,7 @@ const ProfileScreen = () => {
                 <Text style={styles.profileHomeUsernameText}>Hi, I'm {nameOfUser}</Text>
                 <Text style={styles.profileHomeJoin}>{emailOfUser}</Text>
             </View>
-            <TouchableOpacity style={styles.profileHomeEditBtn} onPress={() => console.log('Edit button pressed')}>
+            <TouchableOpacity style={styles.profileHomeEditBtn} onPress={() => navigation.navigate('EditProfileScreen')}>
                 <Text style={styles.profileHomeEditText}>Edit</Text>
             </TouchableOpacity>
         </View>

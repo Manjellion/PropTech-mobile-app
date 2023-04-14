@@ -18,7 +18,6 @@ const HomeScreen = ({ navigation }) => {
               const postsResult = await API.graphql(
                   graphqlOperation(listPosts)
               )
-
               setPosts(postsResult.data.listPosts.items)
           } catch(err) {
               console.log("Error:", err);
